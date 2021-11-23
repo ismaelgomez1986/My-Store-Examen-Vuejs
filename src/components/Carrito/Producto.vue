@@ -61,17 +61,23 @@ export default {
 }
 
 .card {
-  height: 30vh;
-  background-color: rgb(141, 151, 122);
-  margin: 0 20px;
+    height: 33vh;
+    background-color: rgb(141, 151, 122);
+    margin: 0 20px;
     display: inline-block;
     border-radius: 20px;
     border-style: none;
     box-shadow: 13px 13px 5px rgb(82, 82, 1);
 
     &:hover {
-        size: 105%;
         box-shadow: 13px 13px 5px rgb(42, 42, 0);
+        transform: scale(1.1);
+        transition: .5s;
+    }
+
+    &:not( :hover) {
+        transform: scale(1);
+        transition: .5s;
     }
 }
 
@@ -82,7 +88,7 @@ export default {
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 </style>
