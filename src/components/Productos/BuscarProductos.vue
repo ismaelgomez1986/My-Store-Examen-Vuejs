@@ -3,12 +3,11 @@
 <div>
     <h1>Todos los productos</h1>
     <hr />
-    <br />
     <div class="header">
         <h3>Buscar Productos</h3>
         <input type="text" v-model="producto" placeholder="Ingrese un nombre de producto, precio máximo o categoría" />
     </div>
-    <br />
+
     <div class="row">
         <div class="col-sm mb-4 mb-md-0" v-for="(item, $index) in productoDisponiblePorNombre(producto.toLowerCase())" :key="$index">
             <TarjetaProducto :producto="item" />
@@ -38,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h3,
 input {
     display: inline-block;
@@ -76,22 +75,29 @@ input {
 }
 
 .header {
-    margin-left: 2vw;
+    margin: 0 0 50px 3vw;
     width: 88vw;
     background-color: olive;
     border-radius: 10px;
+    box-shadow: 13px 13px 5px rgb(82, 82, 1);
 
-        @media (max-width: 1005px) {
-        width: 80vw;
+    &:hover {
+        size: 105%;
+        box-shadow: 13px 13px 5px rgb(42, 42, 0);
+        transition: .5s;
     }
 
-    & * {
-        vertical-align: middle;
-        display: inline-block;
+    @media (max-width: 1005px) {
+        width: 80vw;
     }
 }
 
 .row {
-  text-align: center;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid rgb(49, 71, 3);
+    background-color:  rgb(49, 71, 3);
 }
 </style>
