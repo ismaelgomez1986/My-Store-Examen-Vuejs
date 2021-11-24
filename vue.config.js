@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 module.exports = {
-    publicPath: '/My-Store-Examen-Vuejs',
+publicPath: '/My-Store-Examen-Vuejs'
 }
