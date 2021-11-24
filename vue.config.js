@@ -4,3 +4,6 @@ module.exports = {
         '/My-Store-Examen-Vuejs/' :
         '/'
 }
+module.exports = {
+    publicPath: '/My-Store-Examen-Vuejs/',
+  }
